@@ -12,7 +12,7 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://agro-node-api-centralcanada.azurewebsites.net/api/auth/login', {
+      const response = await axios.post('https://agro-node-api-centralcanada.azurewebsites.net/api/auth/login', {
         username,
         password,
       });

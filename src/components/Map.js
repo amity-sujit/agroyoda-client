@@ -13,7 +13,7 @@ function Map() {
   // Fetch available years for the crop
   const fetchYears = useCallback(async () => {
     try {
-      const response = await axios.get('http://agro-node-api-centralcanada.azurewebsites.net/api/features/years', {
+      const response = await axios.get('https://agro-node-api-centralcanada.azurewebsites.net/api/features/years', {
         params: { crop },
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -30,7 +30,7 @@ function Map() {
   const fetchFeatures = useCallback(async () => {
     if (!year) return; // Wait until year is set
     try {
-      const response = await axios.get('http://agro-node-api-centralcanada.azurewebsites.net/api/features', {
+      const response = await axios.get('https://agro-node-api-centralcanada.azurewebsites.net/api/features', {
         params: { crop, year },
         headers: { Authorization: `Bearer ${token}` },
       });

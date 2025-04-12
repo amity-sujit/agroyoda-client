@@ -12,7 +12,7 @@ function Register() {
 
   const handleRegister = async () => {
     try {
-      const response = await axios.post('http://agro-node-api-centralcanada.azurewebsites.net/api/auth/register', {
+      const response = await axios.post('https://agro-node-api-centralcanada.azurewebsites.net/api/auth/register', {
         username,
         password,
       });
